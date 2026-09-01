@@ -1,0 +1,1733 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>The Mango | An Informational Guide</title>
+
+
+    <style>
+
+        /* =========================================
+           RESET
+        ========================================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+
+            font-family:
+                Inter,
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            color: #202817;
+
+            background: #fafbf6;
+
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        /* =========================================
+           NAVBAR
+        ========================================= */
+
+        .navbar {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 100;
+
+            height: 72px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 0 7%;
+
+            background:
+                rgba(250,251,246,.92);
+
+            border-bottom:
+                1px solid #e4e8dc;
+
+            backdrop-filter:
+                blur(14px);
+        }
+
+
+        .logo {
+
+            font-size: 22px;
+
+            font-weight: 900;
+
+            letter-spacing: -1px;
+        }
+
+
+        .logo span {
+
+            font-weight: 400;
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            gap: 25px;
+        }
+
+
+        .nav-links a {
+
+            color: #64705a;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            transition:
+                color .2s ease;
+        }
+
+
+        .nav-links a:hover {
+
+            color: #202817;
+        }
+
+
+        /* =========================================
+           HERO
+        ========================================= */
+
+        .hero {
+
+            min-height: 650px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 100px 25px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+
+                radial-gradient(
+                    circle at 50% 15%,
+                    rgba(255,220,92,.35),
+                    transparent 32%
+                ),
+
+                linear-gradient(
+                    145deg,
+                    #f8fbea,
+                    #f2f7df
+                );
+        }
+
+
+        .hero::before {
+
+            content: "🥭";
+
+            position: absolute;
+
+            font-size: 260px;
+
+            opacity: .07;
+
+            right: -30px;
+
+            bottom: -70px;
+
+            transform:
+                rotate(-18deg);
+        }
+
+
+        .hero-content {
+
+            max-width: 850px;
+
+            position: relative;
+
+            z-index: 2;
+        }
+
+
+        .eyebrow {
+
+            margin: 0 0 15px;
+
+            color: #7c896c;
+
+            font-size: 10px;
+
+            font-weight: 900;
+
+            letter-spacing: 2.5px;
+        }
+
+
+        .hero h1 {
+
+            margin: 0;
+
+            font-size:
+                clamp(55px, 9vw, 105px);
+
+            line-height: .95;
+
+            letter-spacing: -6px;
+
+            font-weight: 950;
+
+            color: #26331d;
+        }
+
+
+        .hero h1 span {
+
+            color: #d69d16;
+        }
+
+
+        .hero p {
+
+            max-width: 650px;
+
+            margin:
+                30px auto 0;
+
+            color: #68745e;
+
+            font-size: 18px;
+
+            line-height: 1.7;
+        }
+
+
+        .mango-button {
+
+            display: inline-block;
+
+            margin-top: 32px;
+
+            padding:
+                15px 28px;
+
+            border: none;
+
+            border-radius: 10px;
+
+            background:
+                #27351f;
+
+            color: white;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 12px 25px
+                rgba(39,53,31,.18);
+
+            transition:
+                transform .2s ease,
+                box-shadow .2s ease;
+        }
+
+
+        .mango-button:hover {
+
+            transform:
+                translateY(-3px);
+
+            box-shadow:
+                0 17px 32px
+                rgba(39,53,31,.24);
+        }
+
+
+        /* =========================================
+           INTRO
+        ========================================= */
+
+        .section {
+
+            max-width: 1100px;
+
+            margin: auto;
+
+            padding:
+                105px 30px;
+        }
+
+
+        .section-heading {
+
+            max-width: 700px;
+
+            margin-bottom: 55px;
+        }
+
+
+        .section-heading h2 {
+
+            margin: 0;
+
+            font-size:
+                clamp(36px, 5vw, 57px);
+
+            line-height: 1.05;
+
+            letter-spacing: -3px;
+
+            color: #26321f;
+        }
+
+
+        .section-heading p:last-child {
+
+            margin-top: 20px;
+
+            color: #68745e;
+
+            font-size: 16px;
+        }
+
+
+        /* =========================================
+           FACT CARDS
+        ========================================= */
+
+        .fact-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+
+        .fact-card {
+
+            min-height: 230px;
+
+            padding: 30px;
+
+            background: white;
+
+            border:
+                1px solid #e2e7da;
+
+            border-radius: 18px;
+
+            transition:
+                transform .25s ease,
+                box-shadow .25s ease;
+        }
+
+
+        .fact-card:hover {
+
+            transform:
+                translateY(-7px);
+
+            box-shadow:
+                0 20px 45px
+                rgba(44,60,31,.08);
+        }
+
+
+        .fact-icon {
+
+            font-size: 30px;
+
+            margin-bottom: 20px;
+        }
+
+
+        .fact-card h3 {
+
+            margin:
+                0 0 10px;
+
+            font-size: 20px;
+
+            letter-spacing: -.5px;
+        }
+
+
+        .fact-card p {
+
+            margin: 0;
+
+            color: #74806b;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================================
+           DARK SECTION
+        ========================================= */
+
+        .dark-section {
+
+            padding:
+                110px 30px;
+
+            background:
+                #26321f;
+
+            color: white;
+        }
+
+
+        .dark-inner {
+
+            max-width: 1050px;
+
+            margin: auto;
+        }
+
+
+        .dark-section .eyebrow {
+
+            color: #b7c4a5;
+        }
+
+
+        .dark-section h2 {
+
+            margin: 0;
+
+            max-width: 800px;
+
+            font-size:
+                clamp(38px, 6vw, 65px);
+
+            line-height: 1;
+
+            letter-spacing: -3px;
+        }
+
+
+        .dark-section p {
+
+            max-width: 750px;
+
+            color: #c4ceba;
+
+            font-size: 16px;
+        }
+
+
+        /* =========================================
+           TWO COLUMN
+        ========================================= */
+
+        .two-column {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 80px;
+
+            align-items: start;
+        }
+
+
+        .two-column h2 {
+
+            margin: 0;
+
+            font-size: 44px;
+
+            line-height: 1.05;
+
+            letter-spacing: -2px;
+        }
+
+
+        .article-text p {
+
+            color: #697564;
+
+            font-size: 15px;
+
+            margin-top: 0;
+
+            margin-bottom: 24px;
+        }
+
+
+        /* =========================================
+           VARIETIES
+        ========================================= */
+
+        .variety-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 18px;
+        }
+
+
+        .variety {
+
+            padding: 30px;
+
+            border-radius: 16px;
+
+            background:
+                #f1f5e9;
+
+            border:
+                1px solid #dfe6d3;
+        }
+
+
+        .variety h3 {
+
+            margin:
+                0 0 8px;
+
+            font-size: 22px;
+        }
+
+
+        .variety p {
+
+            margin: 0;
+
+            color: #697564;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================================
+           NUTRITION
+        ========================================= */
+
+        .nutrition {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 12px;
+        }
+
+
+        .nutrition-item {
+
+            padding:
+                25px 15px;
+
+            text-align: center;
+
+            background: white;
+
+            border:
+                1px solid #e2e7da;
+
+            border-radius: 14px;
+        }
+
+
+        .nutrition-item strong {
+
+            display: block;
+
+            font-size: 28px;
+
+            color: #d39a16;
+        }
+
+
+        .nutrition-item span {
+
+            color: #7b8673;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            text-transform: uppercase;
+
+            letter-spacing: .7px;
+        }
+
+
+        /* =========================================
+           HISTORY
+        ========================================= */
+
+        .timeline {
+
+            border-left:
+                2px solid #dfe5d5;
+
+            padding-left: 35px;
+        }
+
+
+        .timeline-item {
+
+            position: relative;
+
+            margin-bottom: 45px;
+        }
+
+
+        .timeline-item::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 11px;
+
+            height: 11px;
+
+            border-radius: 50%;
+
+            background: #d7a01a;
+
+            left: -42px;
+
+            top: 8px;
+        }
+
+
+        .timeline-item h3 {
+
+            margin:
+                0 0 7px;
+
+            font-size: 20px;
+        }
+
+
+        .timeline-item p {
+
+            margin: 0;
+
+            color: #71806a;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================================
+           LONG READING SECTION
+        ========================================= */
+
+        .reading {
+
+            max-width: 850px;
+
+            margin: auto;
+        }
+
+
+        .reading h2 {
+
+            font-size: 42px;
+
+            letter-spacing: -2px;
+
+            line-height: 1.1;
+        }
+
+
+        .reading h3 {
+
+            margin-top: 50px;
+
+            font-size: 23px;
+        }
+
+
+        .reading p {
+
+            color: #697564;
+
+            font-size: 15px;
+
+            line-height: 1.9;
+        }
+
+
+        /* =========================================
+           FINAL CTA
+        ========================================= */
+
+        .final {
+
+            margin: 30px;
+
+            padding:
+                110px 30px;
+
+            text-align: center;
+
+            border-radius: 28px;
+
+            background:
+
+                linear-gradient(
+                    135deg,
+                    #fff0a9,
+                    #ffd96a
+                );
+        }
+
+
+        .final h2 {
+
+            margin: 0;
+
+            font-size:
+                clamp(40px, 6vw, 65px);
+
+            line-height: 1;
+
+            letter-spacing: -3px;
+        }
+
+
+        .final p {
+
+            color: #71643a;
+
+            margin:
+                20px auto 0;
+
+            max-width: 550px;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+
+            padding:
+                45px 7%;
+
+            background: #202a1b;
+
+            color: #aeb9a1;
+
+            font-size: 11px;
+
+            text-align: center;
+        }
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media (max-width: 750px) {
+
+            .navbar {
+                padding: 0 5%;
+            }
+
+            .nav-links {
+                gap: 12px;
+            }
+
+            .nav-links a {
+                font-size: 11px;
+            }
+
+            .fact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .two-column {
+                grid-template-columns: 1fr;
+
+                gap: 35px;
+            }
+
+            .variety-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nutrition {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .hero h1 {
+                letter-spacing: -4px;
+            }
+
+            .final {
+                margin: 15px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     NAVIGATION
+========================================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        Mango<span>Guide</span>
+    </div>
+
+
+    <nav class="nav-links">
+
+        <a href="#facts">
+            Facts
+        </a>
+
+        <a href="#history">
+            History
+        </a>
+
+        <a href="#varieties">
+            Varieties
+        </a>
+
+        <a href="#nutrition">
+            Nutrition
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <p class="eyebrow">
+            AN INFORMATIONAL GUIDE
+        </p>
+
+
+        <h1>
+            The <span>Mango</span>
+        </h1>
+
+
+        <p>
+
+            One of the world's most widely enjoyed tropical fruits,
+            the mango has a long history, hundreds of varieties,
+            and a surprisingly interesting journey from tree to table.
+
+        </p>
+
+
+        <a
+            class="mango-button"
+            href="https://mangoesmangoes.onrender.com">
+
+            MANGO →
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     QUICK FACTS
+========================================= -->
+
+<section
+    class="section"
+    id="facts"
+>
+
+    <div class="section-heading">
+
+        <p class="eyebrow">
+            QUICK FACTS
+        </p>
+
+
+        <h2>
+            Meet the mango.
+        </h2>
+
+
+        <p>
+
+            Before getting into its history and varieties,
+            here are a few basic facts about this distinctive
+            tropical fruit.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="fact-grid">
+
+
+        <article class="fact-card">
+
+            <div class="fact-icon">
+                🌳
+            </div>
+
+            <h3>
+                It grows on trees.
+            </h3>
+
+            <p>
+
+                Mangoes grow on evergreen trees that can become
+                quite large and productive. Their fruit develops
+                after flowering and may take several months to mature.
+
+            </p>
+
+        </article>
+
+
+
+        <article class="fact-card">
+
+            <div class="fact-icon">
+                🌎
+            </div>
+
+            <h3>
+                It is grown worldwide.
+            </h3>
+
+            <p>
+
+                Mango cultivation is especially important in tropical
+                and subtropical regions, where warm temperatures
+                support the fruit's growth.
+
+            </p>
+
+        </article>
+
+
+
+        <article class="fact-card">
+
+            <div class="fact-icon">
+                🥭
+            </div>
+
+            <h3>
+                There are many varieties.
+            </h3>
+
+            <p>
+
+                Mangoes are not one uniform fruit. Varieties can
+                differ significantly in size, shape, color, texture,
+                aroma, sweetness, and fiber.
+
+            </p>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     WHAT IS A MANGO?
+========================================= -->
+
+<section class="dark-section">
+
+    <div class="dark-inner">
+
+        <p class="eyebrow">
+            BOTANICAL BASICS
+        </p>
+
+
+        <h2>
+            A tropical fruit with
+            a surprisingly deep history.
+        </h2>
+
+
+        <p>
+
+            The mango belongs to the genus Mangifera and the
+            cashew family, Anacardiaceae. Its scientific name is
+            Mangifera indica. The species has been cultivated for
+            thousands of years and has become deeply connected
+            with food traditions in many parts of the world.
+
+        </p>
+
+
+        <p>
+
+            Although modern mangoes come in countless forms,
+            their common ancestor is associated with South Asia.
+            From there, mango cultivation and trade spread into
+            other regions and eventually across the globe.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     HISTORY
+========================================= -->
+
+<section
+    class="section"
+    id="history"
+>
+
+    <div class="two-column">
+
+        <div>
+
+            <p class="eyebrow">
+                HISTORY
+            </p>
+
+
+            <h2>
+                Thousands of years
+                in the making.
+            </h2>
+
+        </div>
+
+
+        <div class="article-text">
+
+            <p>
+
+                Mango cultivation has an extremely long history.
+                Evidence and historical traditions connect the
+                domestication of mangoes with the Indian
+                subcontinent.
+
+            </p>
+
+
+            <p>
+
+                Over centuries, mangoes traveled through trade
+                routes and cultural exchanges. The fruit eventually
+                reached regions throughout Southeast Asia, Africa,
+                and later the Americas.
+
+            </p>
+
+
+            <p>
+
+                Today, mangoes are cultivated in many warm regions
+                around the world, making them one of the most
+                recognizable tropical fruits.
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div style="height:70px;"></div>
+
+
+    <div class="timeline">
+
+
+        <div class="timeline-item">
+
+            <h3>
+                Ancient cultivation
+            </h3>
+
+            <p>
+
+                Mangoes have been cultivated in South Asia for
+                thousands of years, becoming an important part
+                of regional food and agricultural traditions.
+
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <h3>
+                Expansion across Asia
+            </h3>
+
+            <p>
+
+                Cultivation spread through trade and migration,
+                particularly into Southeast Asia, where mangoes
+                developed into many distinctive regional varieties.
+
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <h3>
+                Global cultivation
+            </h3>
+
+            <p>
+
+                Mango cultivation eventually expanded to tropical
+                and subtropical areas in Africa, the Americas,
+                and elsewhere.
+
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <h3>
+                The modern mango
+            </h3>
+
+            <p>
+
+                Modern agriculture has made mangoes available to
+                consumers far beyond their traditional growing
+                regions.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     VARIETIES
+========================================= -->
+
+<section
+    class="section"
+    id="varieties"
+>
+
+    <div class="section-heading">
+
+        <p class="eyebrow">
+            VARIETIES
+        </p>
+
+
+        <h2>
+            Not every mango
+            tastes the same.
+        </h2>
+
+
+        <p>
+
+            Different mango varieties have their own characteristics.
+            Some are especially sweet, some are firm and tart,
+            and others are prized for their smooth texture.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="variety-grid">
+
+
+        <article class="variety">
+
+            <h3>
+                Alphonso
+            </h3>
+
+            <p>
+
+                Known for its rich aroma, smooth texture, and
+                sweet flavor. It is particularly associated with
+                India and is highly valued during its season.
+
+            </p>
+
+        </article>
+
+
+        <article class="variety">
+
+            <h3>
+                Tommy Atkins
+            </h3>
+
+            <p>
+
+                A widely distributed commercial variety known
+                for its firm flesh and durability during transport.
+
+            </p>
+
+        </article>
+
+
+        <article class="variety">
+
+            <h3>
+                Kent
+            </h3>
+
+            <p>
+
+                Often recognized for relatively low fiber and
+                a sweet flavor. It is grown in several tropical
+                agricultural regions.
+
+            </p>
+
+        </article>
+
+
+        <article class="variety">
+
+            <h3>
+                Keitt
+            </h3>
+
+            <p>
+
+                A large mango that can remain green on the outside
+                even when ripe. It is known for juicy flesh and
+                a sweet flavor.
+
+            </p>
+
+        </article>
+
+
+        <article class="variety">
+
+            <h3>
+                Ataulfo
+            </h3>
+
+            <p>
+
+                A smaller mango with golden-yellow flesh and a
+                creamy texture. It is commonly sold in markets
+                across North America.
+
+            </p>
+
+        </article>
+
+
+        <article class="variety">
+
+            <h3>
+                Haden
+            </h3>
+
+            <p>
+
+                A historically important variety that helped
+                influence mango cultivation in parts of the
+                Americas.
+
+            </p>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     NUTRITION
+========================================= -->
+
+<section
+    class="section"
+    id="nutrition"
+>
+
+    <div class="section-heading">
+
+        <p class="eyebrow">
+            NUTRITION
+        </p>
+
+
+        <h2>
+            What's inside?
+        </h2>
+
+
+        <p>
+
+            Mangoes contain a variety of nutrients and naturally
+            occurring compounds. Exact nutritional values vary
+            depending on serving size and preparation.
+
+        </p>
+
+    </div>
+
+
+
+    <div class="nutrition">
+
+
+        <div class="nutrition-item">
+
+            <strong>
+                C
+            </strong>
+
+            <span>
+                Vitamin C
+            </span>
+
+        </div>
+
+
+        <div class="nutrition-item">
+
+            <strong>
+                A
+            </strong>
+
+            <span>
+                Vitamin A
+            </span>
+
+        </div>
+
+
+        <div class="nutrition-item">
+
+            <strong>
+                B6
+            </strong>
+
+            <span>
+                Vitamin B6
+            </span>
+
+        </div>
+
+
+        <div class="nutrition-item">
+
+            <strong>
+                +F
+            </strong>
+
+            <span>
+                Dietary Fiber
+            </span>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     HOW MANGOES GROW
+========================================= -->
+
+<section class="dark-section">
+
+    <div class="dark-inner">
+
+        <p class="eyebrow">
+            FROM FLOWER TO FRUIT
+        </p>
+
+
+        <h2>
+            It all starts with
+            a flowering tree.
+        </h2>
+
+
+        <p>
+
+            Mango trees produce flowering structures that contain
+            many small flowers. Only some flowers ultimately develop
+            into mature fruit.
+
+        </p>
+
+
+        <p>
+
+            As the fruit develops, its size, texture, aroma, and
+            color change. Depending on the variety and growing
+            conditions, the outside of a ripe mango may be green,
+            yellow, orange, red, or a mixture of several colors.
+
+        </p>
+
+
+        <p>
+
+            Once harvested, mangoes can continue to ripen.
+            This makes handling, storage, and transportation
+            important parts of commercial mango production.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     LONG READING
+========================================= -->
+
+<section class="section">
+
+    <div class="reading">
+
+        <p class="eyebrow">
+            A CLOSER LOOK
+        </p>
+
+
+        <h2>
+            Why are mangoes
+            so interesting?
+        </h2>
+
+
+        <p>
+
+            Mangoes are interesting partly because the word
+            "mango" describes an enormous range of fruit.
+            Consumers may encounter mangoes that look completely
+            different from one another while still belonging to
+            the same species or closely related cultivated groups.
+
+        </p>
+
+
+        <h3>
+            Flavor
+        </h3>
+
+
+        <p>
+
+            Ripe mango flavor is generally associated with sweetness,
+            acidity, and a distinctive tropical aroma. The balance
+            between these characteristics varies substantially
+            between varieties.
+
+        </p>
+
+
+        <h3>
+            Texture
+        </h3>
+
+
+        <p>
+
+            Texture is another major difference. Some mangoes have
+            very smooth flesh with relatively little fiber, while
+            others contain noticeable strands throughout the fruit.
+            Ripeness also has a major effect on firmness.
+
+        </p>
+
+
+        <h3>
+            Color
+        </h3>
+
+
+        <p>
+
+            Mango skin color is not always a reliable indicator of
+            ripeness. Some varieties remain mostly green even when
+            fully ripe, while others develop yellow, orange, or
+            reddish tones.
+
+        </p>
+
+
+        <h3>
+            Agriculture
+        </h3>
+
+
+        <p>
+
+            Growing mangoes commercially requires attention to
+            climate, soil, irrigation, flowering, pests, diseases,
+            harvesting, and post-harvest handling. Because mango
+            trees are tropical and subtropical plants, temperature
+            is an especially important factor.
+
+        </p>
+
+
+        <h3>
+            Culture
+        </h3>
+
+
+        <p>
+
+            Mangoes have become part of cuisines and cultural
+            traditions across many countries. They can be eaten
+            fresh or incorporated into drinks, desserts, sauces,
+            chutneys, salads, and numerous other dishes.
+
+        </p>
+
+
+        <h3>
+            Global importance
+        </h3>
+
+
+        <p>
+
+            The modern mango industry connects farmers, agricultural
+            researchers, transportation networks, markets, retailers,
+            and consumers. What looks like a simple piece of fruit
+            can therefore represent a surprisingly large agricultural
+            system.
+
+        </p>
+
+
+        <h3>
+            The mango tree
+        </h3>
+
+
+        <p>
+
+            Mango trees are evergreen and can live for many years.
+            Mature trees can become substantial in size, although
+            commercial orchards often manage trees through pruning
+            and other agricultural practices to make harvesting
+            easier.
+
+        </p>
+
+
+        <h3>
+            Ripening
+        </h3>
+
+
+        <p>
+
+            Ripening involves a series of biological changes.
+            The fruit generally becomes softer and develops changes
+            in aroma, flavor, and internal chemistry. These changes
+            are part of what makes a ripe mango different from an
+            immature one.
+
+        </p>
+
+
+        <h3>
+            Mangoes around the world
+        </h3>
+
+
+        <p>
+
+            Today, mangoes are enjoyed in many regions far from
+            their historical origins. International trade has
+            allowed consumers to encounter varieties that may
+            have originated thousands of miles away.
+
+        </p>
+
+
+        <p>
+
+            From a botanical perspective, an agricultural perspective,
+            and a cultural perspective, the mango is much more than
+            simply a sweet fruit. It represents thousands of years
+            of cultivation, adaptation, selection, and human
+            interaction with plants.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     FINAL CTA
+========================================= -->
+
+<section class="final">
+
+    <p class="eyebrow">
+        END OF THE GUIDE
+    </p>
+
+
+    <h2>
+        Okay, now go look
+        at some mangoes.
+    </h2>
+
+
+    <p>
+
+        You've made it all the way down.
+        If you're ready for the next step,
+        there's only one button left.
+
+    </p>
+
+
+    <a
+        class="mango-button"
+        href="https://mangoesmangoes.onrender.com">
+
+        MANGO →
+
+    </a>
+
+</section>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer>
+
+    © 2026 Mango Guide ·
+    Informational demonstration website.
+
+</footer>
+
+
+</body>
+
+</html>
+```
